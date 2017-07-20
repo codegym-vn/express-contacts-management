@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title Contacts Management
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+  body
+    nav.navbar.navbar-default
+      .container
+        .navbar-header
+          a(href="/").navbar-brand Contacts Management
+        .nav.navbar-nav.navbar-right
+          a(href="/new").btn.btn-default.glyphicon.glyphicon-edit
+    .container
+        block content
+
+    .container
+        .footer
+            p &copy; 2017 CodeGym.vn

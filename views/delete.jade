@@ -1,0 +1,22 @@
+extends layout
+
+block content
+    h1  Are you sure?
+    table.table
+        tr
+            th Name
+            td #{contact.name}
+        tr
+            th Phone
+            td #{contact.phone}
+        tr
+            th Email
+            td #{contact.email}
+        tr
+            th Created date
+            td #{contact.created_at}
+        tr
+            td(colspan="2")
+                form(method="post")
+                    button.btn.btn-danger Delete
+                    a(href="/").btn.btn-default Cancel

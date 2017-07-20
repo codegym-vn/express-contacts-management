@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  table.table
+    tr
+      th Name
+      th Phone
+      th Email
+      th Created date
+      th Action
+    for contact in contacts
+      tr
+        td #{contact.name}
+        td #{contact.phone}
+        td #{contact.email}
+        td #{contact.created_at}
+        td
+            a(href="/delete/#{contact._id}")
+                span.glyphicon.glyphicon-remove
+            a(href="/edit/#{contact._id}")
+                            span.glyphicon.glyphicon-edit
